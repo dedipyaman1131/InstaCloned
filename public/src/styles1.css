@@ -1,0 +1,22 @@
+.mainContainer {
+    text-align: center;
+    padding-top: 3%;
+    margin: 2% 22% 0 22%;
+    width: 50%;
+    align-content: center;;
+}
+
+.instapic{
+    width: 30rem;
+}
+
+.textDiv{
+    position: relative;
+    top: 7%;
+  margin: 2% 3% 2% 3%;
+ 
+
+};
+.loginDiv{
+    color: aqua;
+}
