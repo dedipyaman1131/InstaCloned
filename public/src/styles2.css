@@ -20,10 +20,28 @@
 .loginDiv{
     color: aqua;
 }
-.loginSignup{
+#instaclonedDiv p{
+   
+    color: rgb(74, 156, 233);
+}
+.col-md-75{
+    margin: 8px;
+}
+input{
+    width: 80%;
+    height: 50%;
+    border: 1px solid #ccc;
+    border-radius:5%;
+    margin: 1px;
+}
+.formDiv{
     position: absolute;
     width: 80%;
     background-color: azure;
     left:10%;
     border-radius:5%; 
+}
+::placeholder {
+    
+    font-size: 12px;
 }
