@@ -29,22 +29,24 @@
                         </div>
 
                         <div class="formDiv">
-                            <form action="">
+                            <form id="signupForm" action="">
                                 <div class="">
                                     <div class="col-md-75">
-                                        <input required placeholder="Mobile Number or Email" type="text">
+                                        <input id='email' required placeholder="Mobile Number or Email" type="text">
                                     </div>
                                     <div class="col-md-75">
-                                        <input required placeholder="Full Name" type="text">
+                                        <input id='name' required placeholder="Full Name" type="text">
                                     </div>
                                     <div class="col-md-75">
-                                        <input required placeholder="Password" type="password">
+                                        <input id="password" required placeholder="Password" type="password">
                                     </div>
                                     <div class="col-md-75">
-                                        <input required placeholder="Confirm Password" type="password">
+                                        <input id="confirmPassword" required placeholder="Confirm Password"
+                                            type="password">
                                     </div>
 
-                                    <button class="btn btn-primary btn-sm"> Sign Up</button>
+                                    <button id="signupBtn" type="submit" class="btn btn-primary btn-sm"> Sign
+                                        Up</button>
                             </form>
 
                         </div>
@@ -64,5 +66,6 @@
         </div>
     </div>
 
-
+    <!-- js link -->
+    <script src="signup.js"></script>
     <%- include('footer') %>

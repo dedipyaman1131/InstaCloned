@@ -32,13 +32,14 @@
                             <form action="">
                                 <div class="">
                                     <div class="col-md-75">
-                                        <input required placeholder="Username" type="text">
+                                        <input id="email" name="email" required placeholder="Email" type="text">
                                     </div>
                                     <div class="col-md-75">
-                                        <input required placeholder="Password" type="password">
+                                        <input id="password" name="password" required placeholder="Password"
+                                            type="password">
                                     </div>
 
-                                    <button class="btn btn-primary btn-sm"> Log in</button>
+                                    <button type="submit" id="loginBtn" class="btn btn-primary btn-sm"> Log in</button>
                             </form>
 
                         </div>
@@ -57,6 +58,8 @@
 
         </div>
     </div>
+    <!-- script -->
 
+    <script src="login.js"></script>
 
     <%- include('footer') %>
