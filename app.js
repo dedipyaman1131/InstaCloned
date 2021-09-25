@@ -58,12 +58,20 @@ app.get('/login',(req,res)=>{
     res.render('login')
 });
 app.get('/home',(req,res)=>{
-    res.render('home')
-});
+    // const users = User.find({});
+    // res.render('home',{users:req.users});
+
+    User.find({}, function(err, data) {
+      
+        res.render('home', {data})
+})
+})
+
 
 //post
 
 app.post('/signup',(req,res)=>{
+
    let email = req.body.email;
    let name = req.body.name;
    let password = req.body.password;
