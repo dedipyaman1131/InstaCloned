@@ -13,7 +13,7 @@ const PORT = 3000;
 const flash = require('connect-flash');
 
 // //Passport Config
-require('./configg/passport')(passport);
+// require('./configg/passport')(passport);
 
 //passport
 app.use(session({
