@@ -27,33 +27,36 @@
                                 Log in to see photos from your friends
                             </p>
                         </div>
+                        <%- include('messages') %>
 
-                        <div class="formDiv">
-                            <form action="">
-                                <div class="">
-                                    <div class="col-md-75">
-                                        <input id="email" name="email" required placeholder="Email" type="text">
-                                    </div>
-                                    <div class="col-md-75">
-                                        <input id="password" name="password" required placeholder="Password"
-                                            type="password">
-                                    </div>
+                            <div class="formDiv">
+                                <form id="loginForm" action="/login" method="POST">
+                                    <div class="">
+                                        <div class="col-md-75">
+                                            <input id="email" name="email" required placeholder="Email" type="text">
+                                        </div>
+                                        <div class="col-md-75">
+                                            <input id="password" name="password" required placeholder="Password"
+                                                type="password">
+                                        </div>
 
-                                    <button type="submit" id="loginBtn" class="btn btn-primary btn-sm"> Log in</button>
-                            </form>
-                            <p style="position: relative; top: 7px;">New user?</p>
-                            <a style="padding-bottom: 7px;" class="btn btn-sm btn-primary" href="/signup">Sign up
-                                here</a>
-                        </div>
-                        <div class="appButton" style="padding-top: 15%;">
-                            <p>get the app on</p>
-                            <button type="button" class="btn btn-dark btn-sm"><i class="fab fa-apple"></i> App
-                                Store</button>
+                                        <button type="submit" id="loginBtn" class="btn btn-primary btn-sm"> Log
+                                            in</button>
+                                </form>
+                                <p style="position: relative; top: 7px;">New user?</p>
+                                <a style="padding-bottom: 7px;" class="btn btn-sm btn-primary" href="/signup">Sign up
+                                    here</a>
+                            </div>
+                            <div class="appButton" style="padding-top: 15%;">
+                                <p>get the app on</p>
+                                <button type="button" class="btn btn-dark btn-sm"><i class="fab fa-apple"></i> App
+                                    Store</button>
 
-                            <button type="button" class="btn btn-outline-dark btn-sm"><i class="fab fa-google-play"></i>
-                                Google Play</button>
+                                <button type="button" class="btn btn-outline-dark btn-sm"><i
+                                        class="fab fa-google-play"></i>
+                                    Google Play</button>
 
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
