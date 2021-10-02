@@ -11,6 +11,7 @@ const bcrypt = require('bcryptjs')
 const saltRoununds = 10;
 const PORT = 3000;
 const flash = require('connect-flash');
+const { isLoggedIn } = require('./configg/auth');
 
 // //Passport Config
 // require('./configg/passport')(passport);
@@ -29,6 +30,7 @@ app.use(passport.session())
  app.use(flash());
  //Global variables
 app.use((req,res,next)=> {
+    res.locals.success_msg = req.flash('success_msg');
     res.locals.error = req.flash('error');
    
     next();
@@ -81,18 +83,12 @@ app.get('/signup', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login')
 });
-app.get('/home', (req, res) => {
-    if(req.isAuthenticated()){
-        User.find({}, function (err, data) {
+app.get('/home',isLoggedIn, (req, res) => {
+    res.render('home', {
+        user: req.user
+    })
 
-            res.render('home', { data })
-        })
-    }else{
-        res.render('login')
-    }
-})
-
-
+});
 //
 
 
@@ -182,7 +178,13 @@ app.post('/login', (req, res, next) => {
       failureFlash: true
     })(req, res, next);
   });
+ 
 
+app.get('/logout',(req,res)=>{
+    req.logOut();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/login');
+})
 
 app.listen(PORT, (req, res) => {
     console.log(`server is running on ${PORT}`);
