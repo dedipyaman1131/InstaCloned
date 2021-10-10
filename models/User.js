@@ -4,7 +4,13 @@ const instaSchema = new mongoose.Schema({
 
     username: String,
     email: String,
-    password: String
+    password: String,
+    displayPicture: {type: String,
+    default: 'placeholder.jpg'
+    },
+    postImage:{type: String,
+        default: 'placeholder.jpg'
+        }
 });
 instaSchema.plugin(passportLocalMongoose);
 

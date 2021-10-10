@@ -25,37 +25,52 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class=" ml-auto navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><i class="fas fa-house-user"></i> <span
+                    <a class="nav-link" href="/home"><i class="fas fa-house-user"></i> <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#"><i class="far fa-heart"></i> <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> <i class="fas fa-user-circle"></i><span
+                    <a class="nav-link" href="/profile"> <i class="fas fa-user-circle"></i><span
                             class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
     </nav>
-    <h1>
 
-        <p> welcome:
-            <%= user.username %>
-        </p>
-
-
-        </p>
-    </h1>
     <!-- body -->
+    <div id="mainBody" class=" row mainDiv">
 
-    <div class="body">
-        <div>
-            <div>
-                <a href="/login" class="btn btn-secondary">Logout</a>
-            </div>
+        <div class="timelineDiv col-md-8">
+
+            <%- include('messages') %>
+                <form action="/home" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="image" class="text-white">Upload image</label>
+                        <input type="file" name="img" id="image" class="form-control-file text-white">
+                        <input type="submit" value="Upload">
+                    </div>
+                </form>
+
+
+        </div>
+        <div class="profleDiv col-md-2">
+            <a href="/profile">
+                <img class="profileDp " src="../public/uploads/<%=user.displayPicture %>" alt="image">
+
+                <div class="userName">
+
+                    <%= user.username %>
+                </div>
+
+            </a>
+
         </div>
     </div>
+    <style>
+
+    </style>
 
 
 

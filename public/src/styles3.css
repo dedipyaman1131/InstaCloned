@@ -1,3 +1,37 @@
+/* body */
+#mainBody{
+    align-items: center;
+    background-color:rgb(255, 255, 255);
+    margin: 1% 26%;
+   
+
+}
+.timelineDiv{
+    border: 1px solid rgb(212, 212, 210);
+    border-radius: 5px;
+}
+.profleDiv{
+    position:relative;
+    display: inline-block ;
+    left: 15%;
+    align-items: center;
+}
+.profileDp{
+    width: 50%;
+    position: relative;
+    right: 30px;
+    border-radius: 10px;
+}
+.userName{
+    color: rgb(53, 189, 223) !important;
+    height: 10%;
+    text-align: center;
+    position: relative;
+    bottom: 65px;
+    left: 40px;
+}
+
+/* nav */
 #navbar{
     padding: 2px 26%;
 }
@@ -5,4 +39,4 @@
     position:absolute;
     font-family: Charmonman, cursive;
     
-}
+};
